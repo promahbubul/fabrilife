@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="common.css" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <!-- Mobile Menu -->
+    <nav class="md:hidden">
+      <div
+        onclick="controlMenu()"
+        id="hanburgerMenu"
+        class="fixed top-5 z-30 left-5 p-2 bg-[#000000]/80 rounded-md"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png"
+          alt=""
+          class="w-10 invert"
+        />
+      </div>
+      <!-- Menu -->
+      <div id="hamburgerMenu" class="fixed hidden inset-0 w-full z-30">
+        <div
+          onclick="showMenu()"
+          class="absolute inset-0 bg-black/85 z-40 w-full"
+        ></div>
+        <div class="absolute w-10/12 bg-white inset-y-0 z-50">
+          <div class="mt-2 mr-3 flex justify-end">
+            <button onclick="showMenu()" class="">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/11450/11450177.png"
+                alt=""
+                class="w-8"
+              />
+            </button>
+          </div>
+          <div class="flex flex-col gap-1 mt-10">
+            <a href="" class="text-lg bg-slate-300 py-2 px-5">Home</a>
+            <a href="" class="text-lg bg-slate-300 py-2 px-5">About</a>
+            <a href="" class="text-lg bg-slate-300 py-2 px-5">Contact</a>
+            <a href="" class="text-lg bg-slate-300 py-2 px-5">Products</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Top Header -->
+    <nav class="hidden lg:block">
+      <section class="flex flex-row items-center bg-gray-100">
+        <div class="w-full">
+          <div class="max-w-max bg-gray-500 text-white py-2 px-5">
+            <img src="" alt="" class="" />
+            <a href="" class="font-bold hover:underline"
+              >EXCLUSIVE T-SHIRTS ON SALE | Limited time only</a
+            >
+            <img src="" alt="" class="" />
+          </div>
+        </div>
+        <div class="w-full flex flex-row items-center text-center">
+          <div class="w-4/12 mr-5 bg-green text-center py-2 text-white">
+            <a href="" class="hover:underline">Order Bulk</a>
+          </div>
+          <div class="w-4/12 py-[10px] bg-gray-200 text-sm">
+            <p class="">Bangladesh</p>
+          </div>
+          <div class="w-4/12 flex flex-row items-center">
+            <button class="w-full">
+              <a href="" class="">Help</a>
+            </button>
+            <button class="w-full">
+              <a href="" class="">Login</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-row items-center justify-between">
+        <div
+          class="w-4/12 flex flex-row items-center justify-center border-red-500"
+        >
+          <!-- Logo -->
+          <a href="" class="w-full py-4">
+            <img
+              src="https://fabrilife.com/img/fabrilife.svg"
+              alt=""
+              class="w-[180px] mx-auto"
+            />
+          </a>
+          <!-- Menu List -->
+          <a href="" class="w-full text-center py-4">Shop</a>
+        </div>
+        <div class="w-8/12 flex flex-row items-center justify-center">
+          <form action="" class="w-8/12 relative">
+            <input
+              type="text"
+              class="w-full py-2 border px-5 outline-none focus:border-blue-100 border-black/15"
+              placeholder="Search Products by Titles or Tags"
+            />
+            <button class="w-5 absolute top-1/2 -translate-y-1/2 right-4">
+              <img src="./assets/icons/search.svg" alt="" />
+            </button>
+          </form>
+          <a href="" class="w-4/12 text-center">
+            <div class="w-6 text-center mx-auto">
+              <img src="./assets/icons/cart.svg" alt="" class="mx-auto" />
+            </div>
+          </a>
+        </div>
+      </section>
+    </nav>
+    <!-- Banner Section -->
+    <section class="hidden md:block">
+      <a href="" class="">
+        <img
+          src="https://fabrilife.com/image-gallery/663c8117d711e.jpg"
+          alt=""
+        />
+      </a>
+    </section>
+    <section class="md:hidden">
+      <img
+        src="https://fabrilife.com/image-gallery/663c8117d340a.jpg"
+        alt=""
+        class="h-[260px] w-full object-cover"
+      />
+    </section>
+    <!-- Menu 2 -->
+    <section
+      class="mt-3 hidden md:flex md:flex-row justify-between items-center bg-gray-100 mb-2"
+    >
+      <a
+        style="clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%)"
+        href=""
+        class="uppercase text-center py-3 w-3/12 block bg-gray-200"
+        ><div class="">Shop Now</div></a
+      >
+      <div
+        class="w-7/12 items-center text-black h-10 flex flex-row justify-evenly"
+      >
+        <a href="" class="text-base font-medium uppercase">MEN</a>
+        <a href="" class="text-base font-medium uppercase">WOMEN</a>
+        <a href="" class="text-base font-medium uppercase">KIDS</a>
+      </div>
+      <div
+        style="clip-path: polygon(3% 0%, 100% 0%, 100% 100%, 0% 100%)"
+        class="w-4/12 bg-gray-200 py-6 pl-10 h-10 flex flex-row items-center gap-5"
+      >
+        <p class="">GET 5% OFF ON APP</p>
+        <a href="" class="">
+          <img
+            src="https://fabrilife.com/img/newhome/playstorebadge.svg"
+            alt=""
+            class=""
+          />
+        </a>
+        <a href="" class="">
+          <img
+            src="https://fabrilife.com/img/newhome/fabrilifeappstore.svg"
+            alt=""
+            class=""
+          />
+        </a>
+      </div>
+    </section>
+    <!-- Section Notification -->
+    <section class="container mx-auto">
+      <p class="bg-blue-light py-3 px-5 text-base text-black">
+        <span class="font-bold">Event T-shirt</span>
+        <i class="fa fa-caret-right"></i> T-shirt/Clothing with your brand logo
+        or design? We are delivering worldwide at unbeatable prices.
+        <span class="font-bold"> Click here</span>
+        <i class="fa fa-chevron-circle-right"></i>
+      </p>
+
+      <a class="bg-orange-light cursor-pointer mt-2 py-5 md:py-8 block">
+        <p class="text-[2rem] text-center font-medium text-orange-100">
+          NEW ARRIVAL
+        </p>
+      </a>
+    </section>
+    <!-- Products 1 -->
+    <section class="container mx-auto px-5 md:px-0">
+      <!-- Product container -->
+      <div class="product-container">
+        <!-- product 1 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e19d4b4-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 2 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b738e-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 3 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/6388945749713-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 4 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4d642b-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 5 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4d642b-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 6 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638894573d172-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 7 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e18818e-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 8 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e18818e-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 9 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638894f4efd88-square.png"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 10 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/6388715fe282b-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 11 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e1aa1f4-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 12 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b169a-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 13 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b169a-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 14 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4ba04f-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 15 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4ba04f-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 16 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4ba04f-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 17 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b0dd2-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 18 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b7e0e-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 19 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e16d560-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 20 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4b7330-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 21 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4d4651-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 22 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e18e8a0-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 23 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e18e8a0-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 24 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e1a5fec-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 25 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e1a15bc-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 26 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/61a794e1a15bc-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 27 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/63889c77163fb-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 28 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/63889c77163fb-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 29 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/63889c77163fb-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+        <!-- product 30 -->
+        <a class="product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638741f4bcae5-square.jpg"
+              alt=""
+              class=""
+            />
+            <p class="">Half-Sleeve T-shirt</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Feature Products 1 -->
+    <section class="container mx-auto mt-14">
+      <!-- Feature product container -->
+      <div
+        class="reature-product-container px-5 md:px-0 flex flex-col gap-2 md:gap-0 md:flex-row"
+      >
+        <!-- Product 1 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638938e7d0d50-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 2 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dc9c88d-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 3 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dce126d-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Exclusive products section 1 -->
+    <section
+      class="container h-full gap-4 px-5 md:p-0 md:gap-8 mx-auto mt-8 md:mt-14 grid grid-cols-12"
+    >
+      <!-- Left -->
+      <div class="col-span-12 md:col-span-4">
+        <a href="" class="feature-product-card block">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-span-12 md:col-span-8 h-full">
+        <!-- Product container -->
+        <div class="exclusive-product-container">
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65a928299b460-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65a9195c5c5b7-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65a9195c5c5b7-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65a7c56293326-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65a7c56293326-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/656c2fc4231cb-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/655de6064b6c2-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6556068081c5a-square.jpeg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Confidence Section -->
+    <section
+      class="flex flex-col md:flex-row items-center container mx-auto mt-14 gap-5 md:gap-0 p-5 md:p-0"
+    >
+      <div class="w-full md:w-8/12 text-black">
+        <div class="flex flex-row items-end">
+          <h1 class="text-4xl font font-normal">Fabrilife</h1>
+          <img
+            src="./assets/icons/rightarrow.svg"
+            alt=""
+            class="w-8 font-bold"
+          />
+        </div>
+        <h2 class="text-2xl mt-2 gap-5">
+          Because comfort and confidence go hand in hand.
+        </h2>
+        <p class="text-base mt-2 max-w-4xl w-full">
+          We focus on carefully selecting the best clothing that is comfortable,
+          looks great, and makes you confident. Apart from the fabric, design
+          and fit, we go through strict quality control parameters to give you
+          what you truly deserve. The power of a good outfit is how it can
+          influence your perception of yourself.
+        </p>
+      </div>
+      <div class="w-full md:w-4/12">
+        <img
+          src="https://fabrilife.com/image-gallery/638b1d9333f59.png"
+          alt=""
+          class=""
+        />
+      </div>
+    </section>
+    <!-- Exclusive products section 2 -->
+    <section
+      class="container h-full px-5 md:px-0 gap-4 md:gap-8 mx-auto mt-8 md:mt-14 grid grid-cols-12"
+    >
+      <!-- Left -->
+      <div class="col-span-12 md:col-span-4">
+        <a href="" class="feature-product-card block">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/6389374585bcd-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-span-12 md:col-span-8 h-full">
+        <!-- Product container -->
+        <div class="exclusive-product-container">
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65901cb4061ce-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 2 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/657d77d947aa1-square.jpeg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 3 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6383785ce4773-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 4 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6383785ce79eb-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 5 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/637e276b0012e-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 6 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6387683030ad1-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Feature Products 2 -->
+    <section class="container px-5 md:px-0 mx-auto mt-8 md:mt-14">
+      <!-- Feature product container -->
+      <div
+        class="reature-product-container px-5 md:px-0 flex flex-col gap-2 md:gap-0 md:flex-row"
+      >
+        <!-- Product 1 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dcd7e6e-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 2 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dccfbf4-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 3 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/63893746ac793-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Products 2 -->
+    <!-- End -->
+    <!-- Feature Products 3 -->
+    <section class="container px-5 md:px-0 mx-auto mt-8 md:mt-14">
+      <!-- Feature product container -->
+      <div
+        class="reature-product-container flex gap-2 md:gap-0 flex-col md:flex-row"
+      >
+        <!-- Product 1 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dc9f8e6-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 2 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dd192d3-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+        <!-- Product 3 -->
+        <a href="" class="feature-product-card">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dcdeb6f-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Exclusive products section 3 -->
+    <section
+      class="container h-full gap-3 px-5 md:px-0 md:gap-8 mx-auto mt-14 grid grid-cols-12"
+    >
+      <!-- Left -->
+      <div class="col-span-12 md:col-span-4">
+        <a href="" class="feature-product-card block">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dd011dc-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-span-12 md:col-span-8 h-full">
+        <!-- Product container -->
+        <div class="exclusive-product-container">
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6556fba7611d7-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 2 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/650c5a9a10c63-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 3 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65142ece27823-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 4 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/642edbcbb2bcb-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 5 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/63889e1972643-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 6 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/6388b06059dfd-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 6 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/63889e19700eb-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 8 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/65142ecf8f833-square.png"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Exclusive products section 4 -->
+    <section
+      class="container h-full gap-3 px-5 md:px-0 md:gap-8 mx-auto mt-14 grid grid-cols-12"
+    >
+      <!-- Left -->
+      <div class="col-span-12 md:col-span-4">
+        <a href="" class="feature-product-card block">
+          <div class="">
+            <img
+              src="https://fabrilife.com/image-gallery/638a77dcdd7bb-square.jpg"
+              alt=""
+              class=""
+            />
+            <div class="opacity"></div>
+            <p class="">Printed Short Sleeve</p>
+          </div>
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-span-12 md:col-span-8 h-full">
+        <!-- Product container -->
+        <div class="exclusive-product-container">
+          <!-- product 1 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eec9a0e2cfd8.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 2 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eec9a0e110ec.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 3 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/60a4f9d140a76-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 4 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/60a4f9d18e52a-square.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 5 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eec9a0e1d59e.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 6 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eec9a0dd8210.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 6 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eb191ac092a4.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+          <!-- product 8 -->
+          <a class="exclusive-product-card">
+            <div class="">
+              <img
+                src="https://fabrilife.com/products/5eb191ac23445.jpg"
+                alt=""
+                class=""
+              />
+              <p class="">
+                <span class="font-bold">৳ 699.00</span>
+                <span class="line-through font-light text-gray-300">
+                  ৳ 795.00</span
+                >
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Socks -->
+    <section class="container mx-auto mt-14">
+      <!-- Heading -->
+      <a href="" class="text-center">
+        <div class="bg-accent-light py-2">
+          <p
+            style="text-shadow: 1px 1px #fff"
+            class="text-accent text-xs md:text-base font-semibold uppercase"
+          >
+            The Best Quality Socks you can find in Bangladesh
+          </p>
+          <h2
+            style="text-shadow: 1px 1px #fff"
+            class="text-2xl md:text-3xl my-1 text-accent"
+          >
+            Premium Antibacterial Socks
+          </h2>
+          <p
+            style="text-shadow: 1px 1px #fff"
+            class="text-accent text-base font-semibold uppercase"
+          >
+            Visit Store >
+          </p>
+        </div>
+      </a>
+      <section
+        class="container h-full gap-2 md:gap-8 mx-auto mt-4 grid grid-cols-12 px-5 md:px-0"
+      >
+        <!-- Left -->
+        <div class="col-span-12 md:col-span-4">
+          <a href="" class="feature-product-card block">
+            <div class="">
+              <img
+                src="https://fabrilife.com/image-gallery/638a77dcea895-square.jpg"
+                alt=""
+                class=""
+              />
+              <!-- <div class="opacity"></div>
+              <p class="">Printed Short Sleeve</p> -->
+            </div>
+          </a>
+        </div>
+        <!-- Right -->
+        <div class="col-span-12 md:col-span-8 h-full">
+          <!-- Product container -->
+          <div class="exclusive-product-container">
+            <!-- product 1 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/65585507be16c-square.jpg"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 2 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/6556fba76a097-square.jpg"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 3 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/6556fba7608e3-square.jpg"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 4 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/637b884d5e9ea-square.jpg"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 5 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/637b884d5be4a-square.jpg"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 6 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/637b884e3c691-square.png"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 7 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/637b884e4c4a1-square.png"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+            <!-- product 8 -->
+            <a class="exclusive-product-card">
+              <div class="">
+                <img
+                  src="https://fabrilife.com/products/637b884e410c4-square.png"
+                  alt=""
+                  class=""
+                />
+                <p class="">
+                  <span class="font-bold">৳ 699.00</span>
+                  <span class="line-through font-light text-gray-300">
+                    ৳ 795.00</span
+                  >
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Wholesale -->
+    <section
+      class="container mx-auto mt-14 flex flex-col md:flex-row bg-contains bg-right bg-no-repeat md:h-[200px]"
+    >
+      <div class="w-full bg-gray-600 p-5 px-5 md:px-0">
+        <div class="flex flex-row">
+          <h2 class="text-2xl text-blue-200">Bulk Order / Wholesale</h2>
+          <img
+            src="./assets/icons/rightarrow.svg"
+            alt=""
+            class="w-6 font-bold"
+          />
+        </div>
+        <p class="text-base max-w-md mt-2 text-black">
+          We provide plain t-shirts and apparel fo all your custom branding
+          needs from the top brands worldwide at unbeatable wholesale prices.
+          With no minimum orders, everyone can enjoy the benefits of buying bulk
+          t-shirts without ordering bulk quantities.
+        </p>
+      </div>
+      <div class="w-full h-full">
+        <img
+          src="https://fabrilife.com/image-gallery/5edc1d60d1b41.jpg"
+          alt=""
+          class="h-full"
+        />
+      </div>
+    </section>
+    <!-- Work with us -->
+    <section class="container mt-14 text-black px-5 md:px-0">
+      <h1 class="text-3xl text-center">Work with us Today</h1>
+      <div
+        class="flex flex-col md:flex-row mt-5 gap-5 md:gap-0 justify-center items-center text-2xl"
+      >
+        <p class="text-center">We are the official merchandising partner of</p>
+        <img
+          src="https://fabrilife.com/img/clients/gp.png"
+          alt=""
+          class="w-[200px] ml-5"
+        />
+      </div>
+      <p class="text-base text-center mt-1">
+        We are proud to work with over a thousand brands and organizations that
+        we call friends <br />As your partner, we value long-term relationships
+        and collaborate toward results.
+      </p>
+    </section>
+    <!-- Slider  -->
+    <section class="container mt-14 relative px-5">
+      <!-- Navigation button -->
+      <div
+        class="absolute inset-x-0 h-10 z-30 flex flex-row justify-between -translate-y-1/2 top-1/2"
+      >
+        <button id="prevBtn">
+          <img src="./assets/icons/previous.svg" alt="" class="w-7" />
+        </button>
+        <button id="nextBtn">
+          <img src="./assets/icons/next.svg" alt="" class="w-7" />
+        </button>
+      </div>
+      <div class="slider">
+        <!-- Item 1 -->
+        <div class="">
+          <img
+            src="https://fabrilife.com/img/clients/1.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/2.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/3.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 2 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/4.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/5.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/6.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 3 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/7.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/8.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/9.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 4 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/10.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/11.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/12.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/13.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/14.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/15.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/16.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/16.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/18.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/19.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/20.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/21.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/22.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/23.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/24.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/25.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/26.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/27.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/28.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/29.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/30.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/31.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/32.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/33.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/34.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/35.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/36.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/37.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/38.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/39.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/40.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/41.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/42.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/43.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/44.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/45.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/46.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/47.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/48.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/49.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/50.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/51.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+        <!-- Item 1 -->
+        <div>
+          <img
+            src="https://fabrilife.com/img/clients/52.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/53.jpg"
+            alt=""
+            class="w-32"
+          />
+          <img
+            src="https://fabrilife.com/img/clients/54.jpg"
+            alt=""
+            class="w-32"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- join Fabrisquad -->
+    <section class="container mt-14">
+      <img
+        src="https://fabrilife.com/image-gallery/61a699084e310.png"
+        alt=""
+        class=""
+      />
+    </section>
+    <!-- Payment Method  -->
+    <section class="bg-gray-100 mt-5 pt-5 pb-3 px-5 lg:px-5">
+      <div
+        class="flex container flex-col md:flex-row items-center justify-between"
+      >
+        <div class="w-full flex flex-col items-center">
+          <div class="">
+            <i class="fa fa-lock text-black text-xl"></i>
+          </div>
+          <p class="text-xl font-medium text-black">
+            All secure payment methods
+          </p>
+          <img
+            src="https://fabrilife.com/img/sslcommerz.png"
+            alt=""
+            class="mt-3"
+          />
+        </div>
+        <div class="w-full text-center">
+          <div class="">
+            <img src="./assets/icons/smile.svg" alt="" class="w-6 mx-auto" />
+          </div>
+          <p class="text-xl font-medium text-black mt-1">
+            All secure payment methods
+          </p>
+          <div class="mt-5">
+            <p class="text-base font-light text-black mt-5 md:mt-0">
+              Made with premium quality materials.
+            </p>
+            <h4 class="font-medium text-lg mt-5 md:mt-0">
+              Cozy yet lasts the test of time
+            </h4>
+          </div>
+        </div>
+        <div class="w-full text-center mt-5 md:mt-0 py-10 md:py-0">
+          <div class="text-center">
+            <i class="fa fa-truck text-black text-xl mx-auto"></i>
+          </div>
+          <img src="https://fabrilife.com/img/delivery.png" alt="" class="" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="">
+      <!-- Footer 1 -->
+      <section class="bg-gray-400 py-10">
+        <div
+          class="container mx-auto flex flex-col px-5 md:px-0 md:flex-row items-center gap-14"
+        >
+          <div class="w-full">
+            <div
+              class="text-base font-medium flex flex-row gap-2 items-center text-white"
+            >
+              <i class="fa-regular fa-envelope text-orange text-xl"></i>
+              <h3 class="">GET SPECIAL DISCOUNTS IN YOUR INBOX</h3>
+            </div>
+            <form action="" class="flex flex-row items-center gap-2">
+              <input
+                type="email"
+                placeholder="Enter email to get offers, discounts and more."
+                class="bg-transparent w-full text-white placeholder:text-gray-300 outline-none p-3 border-b border-b-white"
+              />
+              <button
+                class="bg-orange text-white text-sm hover:bg-orange-200 py-3 px-5"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="w-full">
+            <div
+              class="text-base font-medium flex flex-row gap-2 items-center text-white"
+            >
+              <i class="fa-solid fa-phone text-orange text-xl"></i>
+              <h3 class="">FOR ANY HELP YOU MAY CALL US AT</h3>
+            </div>
+            <p
+              class="text-[#aaaaaa] ml-5 md:ml-0 mt-3 md:mt-0 font-normal text-sm"
+            >
+              +8809677666888
+            </p>
+            <p class="text-[#aaaaaa] ml-5 md:ml-0 font-normal text-sm">
+              Open 24 Hours a Day, 7 Days a week
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Footer 2 -->
+      <section class="bg-gray-300 py-10">
+        <div
+          class="flex flex-col px-5 md:px-0 md:flex-row items-start container mx-auto"
+        >
+          <div class="w-full">
+            <h3 class="text-orange font-bold text-base">FABRILIFE</h3>
+            <div class="flex flex-col gap-2 mt-5">
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >ABOUT US</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >TERMS & CONDITIONS</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >PRIVACY POLICY</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >CANCELLATION & RETURN POLICY</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >FAQS</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2 decoratio"
+                >CONTACT US</a
+              >
+            </div>
+            <div class="flex items-center gap-2 mt-5">
+              <a href="" class="">
+                <i
+                  class="fa-brands fa-facebook-f text-white bg-[#000000] w-8 h-8 rounded-full text-center flex justify-center items-center"
+                ></i>
+              </a>
+              <a href="" class="">
+                <i
+                  class="fa-brands fa-twitter text-white bg-[#000000] w-8 h-8 rounded-full text-center flex justify-center items-center"
+                ></i>
+              </a>
+              <a href="" class="">
+                <i
+                  class="fa-brands fa-youtube text-white bg-[#000000] w-8 h-8 rounded-full text-center flex justify-center items-center"
+                ></i>
+              </a>
+              <a href="" class="">
+                <i
+                  class="fa-brands fa-instagram text-white bg-[#000000] w-8 h-8 rounded-full text-center flex justify-center items-center"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="w-full">
+            <h3 class="text-white font-bold text-base">MEN</h3>
+            <div class="flex flex-col gap-2 mt-5">
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHORT SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >LONG SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >POLO</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHIRT</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >HOODIE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >COMFY TROUSER</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SPORTS TROUSER</a
+              >
+            </div>
+          </div>
+          <div class="w-full">
+            <h3 class="text-white font-bold text-base">W0MEN</h3>
+            <div class="flex flex-col gap-2 mt-5">
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHORT SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >LONG SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >POLO</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHIRT</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >HOODIE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >COMFY TROUSER</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SPORTS TROUSER</a
+              >
+            </div>
+          </div>
+          <div class="w-full">
+            <h3 class="text-white font-bold text-base">KIDS</h3>
+            <div class="flex flex-col gap-2 mt-5">
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >MAGGIE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHORT SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >LONG SLEEVE</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >SHORTS</a
+              >
+              <a
+                href=""
+                class="text-gray-50 hover:text-orange transition-all duration-500 hover:pl-2"
+                >TROUSER</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer 3 -->
+      <section
+        class="bg-white container mx-auto text-center px my-5 text-black text-sm"
+      >
+        <p class="">
+          FABRILIFE prints a huge variety of custom clothing like T-shirts,
+          hoodies and more. Your order is handled daily with a lot of ❤️️ from
+          BANGLADESH and delivered worldwide!
+        </p>
+        <p class="mt-5 md:mt-5">
+          Copyright © 2018 Fabrilife Limited. All Right Reserved
+        </p>
+      </section>
+    </footer>
+
+    <!-- Script -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- js -->
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          arrows: true,
+          dots: false,
+          infinite: true,
+          slidesToShow: 8,
+          slidesToScroll: 1,
+          speed: 300,
+          autoplay: true,
+          adaptiveHeight: true,
+          prevArrow: $("#prevBtn"),
+          nextArrow: $("#nextBtn"),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 6,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
